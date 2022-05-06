@@ -1,0 +1,14 @@
+- hosts: all
+  # as root user
+  become: yes
+  tasks:
+    - name: Update
+      command: apt-get update
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+    - name: Run nginx
+      systemd:
+        name: nginx
+        state: started
