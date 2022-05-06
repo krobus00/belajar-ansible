@@ -1,0 +1,10 @@
+all:
+  vars:
+    ansible_connection: ssh
+  children:
+    cloud:
+      hosts:
+        x.x.x.x:
+          ssh_user: krobus
+        x.x.x.x:
+          ssh_user: krobus
